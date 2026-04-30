@@ -2,6 +2,8 @@
 
 A React + TypeScript dashboard for reviewing façade defects detected from drone-captured imagery. Built as a take-home project for an Inspekt AI Senior Frontend Developer interview.
 
+**Live demo:** https://drone-inspection-gallery.vercel.app/
+
 ## Demo features
 
 - Responsive grid of drone captures with defect counts and severity badges

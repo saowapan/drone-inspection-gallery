@@ -21,7 +21,7 @@ export function CaptureModal({ capture, onClose }: CaptureModalProps) {
 
     return () => {
       document.removeEventListener('keydown', handleKeyDown)
-      document.body.style.overflow = 'hidden' // restore scroll
+      document.body.style.overflow = ''
     }
   }, [capture, onClose])
 

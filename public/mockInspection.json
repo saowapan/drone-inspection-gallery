@@ -1,0 +1,118 @@
+{
+  "inspectionId": "INS-2025-0142",
+  "buildingName": "Asok Tower B",
+  "inspectionDate": "2025-04-15",
+  "droneModel": "DJI Matrice 350 RTK",
+  "facade": "north",
+  "imageWidth": 4000,
+  "imageHeight": 3000,
+  "captures": [
+    {
+      "id": "cap-001",
+      "imageUrl": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200",
+      "altitudeM": 42.5,
+      "capturedAt": "2025-04-15T09:32:11Z",
+      "defects": [
+        {
+          "id": "def-001",
+          "type": "crack",
+          "severity": "high",
+          "confidence": 0.94,
+          "bbox": {
+            "x": 0.31,
+            "y": 0.42,
+            "w": 0.08,
+            "h": 0.05
+          },
+          "notes": "Diagonal crack near window frame"
+        },
+        {
+          "id": "def-002",
+          "type": "rust",
+          "severity": "medium",
+          "confidence": 0.87,
+          "bbox": {
+            "x": 0.65,
+            "y": 0.20,
+            "w": 0.06,
+            "h": 0.04
+          }
+        }
+      ]
+    },
+    {
+      "id": "cap-002",
+      "imageUrl": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1200",
+      "altitudeM": 38.0,
+      "capturedAt": "2025-04-15T09:35:42Z",
+      "defects": [
+        {
+          "id": "def-003",
+          "type": "leak",
+          "severity": "high",
+          "confidence": 0.91,
+          "bbox": {
+            "x": 0.45,
+            "y": 0.55,
+            "w": 0.10,
+            "h": 0.08
+          },
+          "notes": "Water staining below window"
+        }
+      ]
+    },
+    {
+      "id": "cap-003",
+      "imageUrl": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200",
+      "altitudeM": 51.2,
+      "capturedAt": "2025-04-15T09:40:18Z",
+      "defects": [
+        {
+          "id": "def-004",
+          "type": "spalling",
+          "severity": "low",
+          "confidence": 0.72,
+          "bbox": {
+            "x": 0.20,
+            "y": 0.30,
+            "w": 0.07,
+            "h": 0.06
+          }
+        },
+        {
+          "id": "def-005",
+          "type": "discoloration",
+          "severity": "low",
+          "confidence": 0.68,
+          "bbox": {
+            "x": 0.75,
+            "y": 0.65,
+            "w": 0.12,
+            "h": 0.09
+          }
+        }
+      ]
+    },
+    {
+      "id": "cap-004",
+      "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200",
+      "altitudeM": 45.8,
+      "capturedAt": "2025-04-15T09:43:55Z",
+      "defects": [
+        {
+          "id": "def-006",
+          "type": "crack",
+          "severity": "medium",
+          "confidence": 0.83,
+          "bbox": {
+            "x": 0.40,
+            "y": 0.25,
+            "w": 0.05,
+            "h": 0.15
+          },
+          "notes": "Vertical crack in concrete column"
+        }
+      ]
+    }
+  ]
+}

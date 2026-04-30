@@ -16,8 +16,9 @@ A React + TypeScript dashboard for reviewing façade defects detected from drone
 - **TypeScript** in strict mode
 - **TailwindCSS v4** via the official Vite plugin
 - **Vite** as the build tool
+- **Vitest** + **React Testing Library** + **jsdom** for tests
 
-No state management library, no UI component library, no test runner — kept minimal on purpose (see _Trade-offs_ below).
+No state management library and no UI component library — kept minimal on purpose (see _Trade-offs_ below).
 
 ## Running locally
 
@@ -27,6 +28,15 @@ npm run dev
 ```
 
 Then open the URL Vite prints (default `http://localhost:5173`).
+
+## Running tests
+
+```bash
+npm run test          # watch mode
+npm run test -- --run # single run (CI)
+```
+
+Test files live next to the code they cover (e.g. [src/lib/defectStats.test.ts](src/lib/defectStats.test.ts)). Global `expect` and the `@testing-library/jest-dom` matchers are wired up in [src/test/setup.ts](src/test/setup.ts).
 
 ## Architecture decisions
 
@@ -59,7 +69,7 @@ Components were built in isolation and composed at the top level. `DefectCard`, 
 
 I deliberately kept the scope tight to ship a polished, well-understood project rather than a sprawling unfinished one.
 
-- **Tests** — I would add Vitest + React Testing Library. Unit tests for the filter and stat-counting logic, integration tests for `FilterBar` interaction, and a smoke test that the modal opens with the correct capture.
+- **More test coverage** — Vitest + React Testing Library are set up and the stat-counting logic in `src/lib/defectStats.ts` has unit tests. Still to add: integration tests for `FilterBar` interaction and a smoke test that the modal opens with the correct capture.
 - **Runtime schema validation** — `response.json()` is currently asserted as `Inspection`. In production I would validate with **Zod** so a malformed backend response cannot crash the UI.
 - **Context API** — for this scope, prop-drilling the filter state through one level was clearer than introducing Context. I would refactor when at least three components needed shared state.
 - **Performance** — at this data size, no memoization was warranted beyond what I added for demonstration. For 10k+ defects I would virtualize the gallery with `react-window`, paginate the API, and debounce filter inputs. Premature optimization was avoided intentionally.
@@ -78,8 +88,13 @@ src/
     StatTile.tsx             # Reusable summary tile
   hooks/
     useInspection.ts         # Data fetching with loading/error/cleanup
+  lib/
+    defectStats.ts           # Pure stat-counting helpers
+    defectStats.test.ts      # Colocated unit tests
   types/
     inspection.ts            # Shared TypeScript types
+  test/
+    setup.ts                 # Vitest setup (jest-dom matchers)
   App.tsx                    # Composition root
 public/
   mockInspection.json        # Mock API response

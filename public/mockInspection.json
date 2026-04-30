@@ -9,7 +9,7 @@
   "captures": [
     {
       "id": "cap-001",
-      "imageUrl": "https://images.unsplash.com/photo-1486325212027-8081e485255e?w=1200",
+      "imageUrl": "https://images.unsplash.com/photo-1462774603919-1d8087e62cad?w=1200",
       "altitudeM": 42.5,
       "capturedAt": "2025-04-15T09:32:11Z",
       "defects": [
@@ -32,8 +32,8 @@
           "severity": "medium",
           "confidence": 0.87,
           "bbox": {
-            "x": 0.65,
-            "y": 0.20,
+            "x": 0.45,
+            "y": 0.25,
             "w": 0.06,
             "h": 0.04
           }
@@ -42,7 +42,7 @@
     },
     {
       "id": "cap-002",
-      "imageUrl": "https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?w=1200",
+      "imageUrl": "https://images.unsplash.com/photo-1672506142658-eef14f61ec43?w=1200",
       "altitudeM": 38.0,
       "capturedAt": "2025-04-15T09:35:42Z",
       "defects": [
@@ -63,7 +63,7 @@
     },
     {
       "id": "cap-003",
-      "imageUrl": "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?w=1200",
+      "imageUrl": "https://images.unsplash.com/photo-1672508061327-6efaa65896e9?w=1200",
       "altitudeM": 51.2,
       "capturedAt": "2025-04-15T09:40:18Z",
       "defects": [
@@ -95,7 +95,7 @@
     },
     {
       "id": "cap-004",
-      "imageUrl": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200",
+      "imageUrl": "https://images.unsplash.com/photo-1771030669954-a02e803c68a7?w=1200",
       "altitudeM": 45.8,
       "capturedAt": "2025-04-15T09:43:55Z",
       "defects": [
@@ -111,6 +111,203 @@
             "h": 0.15
           },
           "notes": "Vertical crack in concrete column"
+        }
+      ]
+    },
+    {
+      "id": "cap-005",
+      "imageUrl": "https://images.unsplash.com/photo-1758366278819-413b166ca7c0?w=1200",
+      "altitudeM": 48.3,
+      "capturedAt": "2025-04-15T09:47:22Z",
+      "defects": []
+    },
+    {
+      "id": "cap-006",
+      "imageUrl": "https://images.unsplash.com/photo-1758506971731-6d19c762ad98?w=1200",
+      "altitudeM": 55.1,
+      "capturedAt": "2025-04-15T09:51:08Z",
+      "defects": [
+        {
+          "id": "def-007",
+          "type": "crack",
+          "severity": "high",
+          "confidence": 0.96,
+          "bbox": {
+            "x": 0.12,
+            "y": 0.4,
+            "w": 0.04,
+            "h": 0.1
+          },
+          "notes": "Long vertical crack spanning two floors"
+        },
+        {
+          "id": "def-008",
+          "type": "rust",
+          "severity": "medium",
+          "confidence": 0.81,
+          "bbox": {
+            "x": 0.55,
+            "y": 0.60,
+            "w": 0.09,
+            "h": 0.05
+          }
+        },
+        {
+          "id": "def-009",
+          "type": "spalling",
+          "severity": "high",
+          "confidence": 0.89,
+          "bbox": {
+            "x": 0.70,
+            "y": 0.70,
+            "w": 0.15,
+            "h": 0.12
+          },
+          "notes": "Exposed rebar visible"
+        },
+        {
+          "id": "def-010",
+          "type": "discoloration",
+          "severity": "low",
+          "confidence": 0.64,
+          "bbox": {
+            "x": 0.30,
+            "y": 0.75,
+            "w": 0.18,
+            "h": 0.07
+          }
+        }
+      ]
+    },
+    {
+      "id": "cap-007",
+      "imageUrl": "https://images.unsplash.com/photo-1764866915315-0c97b5bae9e9?w=1200",
+      "altitudeM": 60.4,
+      "capturedAt": "2025-04-15T09:55:30Z",
+      "defects": [
+        {
+          "id": "def-011",
+          "type": "rust",
+          "severity": "high",
+          "confidence": 0.93,
+          "bbox": {
+            "x": 0.42,
+            "y": 0.38,
+            "w": 0.11,
+            "h": 0.07
+          },
+          "notes": "Heavy corrosion on steel bracket"
+        }
+      ]
+    },
+    {
+      "id": "cap-008",
+      "imageUrl": "https://images.unsplash.com/photo-1693159682660-c125e71844d8?w=1200",
+      "altitudeM": 35.6,
+      "capturedAt": "2025-04-15T09:59:14Z",
+      "defects": [
+        {
+          "id": "def-012",
+          "type": "spalling",
+          "severity": "medium",
+          "confidence": 0.78,
+          "bbox": {
+            "x": 0.22,
+            "y": 0.50,
+            "w": 0.08,
+            "h": 0.06
+          }
+        },
+        {
+          "id": "def-013",
+          "type": "spalling",
+          "severity": "low",
+          "confidence": 0.71,
+          "bbox": {
+            "x": 0.34,
+            "y": 0.58,
+            "w": 0.06,
+            "h": 0.05
+          }
+        },
+        {
+          "id": "def-014",
+          "type": "discoloration",
+          "severity": "low",
+          "confidence": 0.66,
+          "bbox": {
+            "x": 0.60,
+            "y": 0.32,
+            "w": 0.20,
+            "h": 0.10
+          },
+          "notes": "Likely water staining"
+        }
+      ]
+    },
+    {
+      "id": "cap-009",
+      "imageUrl": "https://images.unsplash.com/photo-1765781127682-48f03f35eada?w=1200",
+      "altitudeM": 40.0,
+      "capturedAt": "2025-04-15T10:03:47Z",
+      "defects": [
+        {
+          "id": "def-015",
+          "type": "leak",
+          "severity": "medium",
+          "confidence": 0.85,
+          "bbox": {
+            "x": 0.50,
+            "y": 0.30,
+            "w": 0.07,
+            "h": 0.20
+          },
+          "notes": "Persistent moisture trail below sealant joint"
+        },
+        {
+          "id": "def-016",
+          "type": "rust",
+          "severity": "low",
+          "confidence": 0.69,
+          "bbox": {
+            "x": 0.18,
+            "y": 0.62,
+            "w": 0.05,
+            "h": 0.04
+          }
+        }
+      ]
+    },
+    {
+      "id": "cap-010",
+      "imageUrl": "https://images.unsplash.com/photo-1769980173070-dd6be379a9ce?w=1200",
+      "altitudeM": 52.7,
+      "capturedAt": "2025-04-15T10:07:19Z",
+      "defects": [
+        {
+          "id": "def-017",
+          "type": "crack",
+          "severity": "low",
+          "confidence": 0.74,
+          "bbox": {
+            "x": 0.28,
+            "y": 0.40,
+            "w": 0.06,
+            "h": 0.03
+          },
+          "notes": "Hairline crack — monitor"
+        },
+        {
+          "id": "def-018",
+          "type": "discoloration",
+          "severity": "medium",
+          "confidence": 0.79,
+          "bbox": {
+            "x": 0.62,
+            "y": 0.55,
+            "w": 0.16,
+            "h": 0.11
+          }
         }
       ]
     }

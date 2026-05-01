@@ -3,6 +3,7 @@
 A React + TypeScript dashboard with TailwindCSS for reviewing façade defects detected from drone-captured imagery (Sample Images and Sample JSON Data).
 
 **Live demo:** https://drone-inspection-gallery.vercel.app/
+
 **Sample JSON Data:** https://drone-inspection-gallery.vercel.app/mockInspection.json
 
 ## Demo features

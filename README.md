@@ -1,8 +1,9 @@
 # Drone Inspection Gallery
 
-A React + TypeScript dashboard for reviewing façade defects detected from drone-captured imagery. Built as a take-home project for an Inspekt AI Senior Frontend Developer interview.
+A React + TypeScript dashboard with TailwindCSS for reviewing façade defects detected from drone-captured imagery (Sample Images and Sample JSON Data).
 
 **Live demo:** https://drone-inspection-gallery.vercel.app/
+**Sample JSON Data:** https://drone-inspection-gallery.vercel.app/mockInspection.json
 
 ## Demo features
 
@@ -28,8 +29,6 @@ No state management library and no UI component library — kept minimal on purp
 npm install
 npm run dev
 ```
-
-Then open the URL Vite prints (default `http://localhost:5173`).
 
 ## Running tests
 
@@ -69,35 +68,7 @@ Components were built in isolation and composed at the top level. `DefectCard`, 
 
 ## Trade-offs and what I would add with more time
 
-I deliberately kept the scope tight to ship a polished, well-understood project rather than a sprawling unfinished one.
-
 - **More test coverage** — Vitest + React Testing Library are set up and the stat-counting logic in `src/lib/defectStats.ts` has unit tests. Still to add: integration tests for `FilterBar` interaction and a smoke test that the modal opens with the correct capture.
-- **Runtime schema validation** — `response.json()` is currently asserted as `Inspection`. In production I would validate with **Zod** so a malformed backend response cannot crash the UI.
-- **Context API** — for this scope, prop-drilling the filter state through one level was clearer than introducing Context. I would refactor when at least three components needed shared state.
 - **Performance** — at this data size, no memoization was warranted beyond what I added for demonstration. For 10k+ defects I would virtualize the gallery with `react-window`, paginate the API, and debounce filter inputs. Premature optimization was avoided intentionally.
 - **3D façade view** — Inspekt's product includes a 3D building view. I scoped this out to avoid a half-finished feature, but `react-three-fiber` would be the natural fit, with the same normalized-coordinate pattern translated to UV mapping on the building's mesh.
 - **Real images and AI output** — image URLs are stock photos from Unsplash and bounding boxes are hardcoded. In production, both would come from the inspection backend.
-
-## Project structure
-
-```
-src/
-  components/
-    BoundingBoxOverlay.tsx   # SVG-free overlay using CSS percentages
-    CaptureModal.tsx         # Detail modal with Esc + click-outside close
-    DefectCard.tsx           # Grid card for one capture
-    FilterBar.tsx            # Severity filter pills
-    StatTile.tsx             # Reusable summary tile
-  hooks/
-    useInspection.ts         # Data fetching with loading/error/cleanup
-  lib/
-    defectStats.ts           # Pure stat-counting helpers
-    defectStats.test.ts      # Colocated unit tests
-  types/
-    inspection.ts            # Shared TypeScript types
-  test/
-    setup.ts                 # Vitest setup (jest-dom matchers)
-  App.tsx                    # Composition root
-public/
-  mockInspection.json        # Mock API response
-```
